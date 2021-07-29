@@ -1,20 +1,14 @@
 import React from 'react';
 import ProductCard from './ProductCard';
 
-const ProductList = () => {
-  const products = [
-    { nombre: 'Monitor', precio: '53000', stock: 5 },
-    { nombre: 'Teclado', precio: '12000', stock: 45 },
-    { nombre: 'Mouse', precio: '8600', stock: 25 },
-  ];
-
+const ProductList = ({ productos }) => {
   const generarCards = () => {
-    const cards = products.map((product) => {
+    const cards = productos.map((producto) => {
       return (
         <ProductCard
-          nombre={product.nombre}
-          precio={product.precio}
-          stock={product.stock}
+          nombre={producto.nombre}
+          precio={producto.precio}
+          stock={producto.stock}
         />
       );
     });
